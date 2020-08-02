@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo中使用音乐和视频播放器</title>
+    <url>/posts/a27c.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="/posts/a27c/29.jpg" class="">
+
+<h2 id="Aplayer播放器"><a href="#Aplayer播放器" class="headerlink" title="Aplayer播放器"></a>Aplayer播放器</h2><p>Aplayer 单曲播放代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;\% aplayer &quot;Melbourne rain&quot; &quot;Steve Wallis&quot; &quot;https:&#x2F;&#x2F;ocsys-1253514939.cos.ap-shanghai.myqcloud.com&#x2F;ocweb_attachment&#x2F;Melbourne%20rain.mp3&quot; &quot;https:&#x2F;&#x2F;ocsys-1253514939.cos.ap-shanghai.myqcloud.com&#x2F;ocweb_attachment&#x2F;MelbourneRain.jpg&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码效果</p>
+
+        <div id="aplayer-aTLIOLCw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-aTLIOLCw"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "Melbourne rain",
+              author: "Steve Wallis",
+              url: "https://ocsys-1253514939.cos.ap-shanghai.myqcloud.com/ocweb_attachment/Melbourne%20rain.mp3",
+              pic: "https://ocsys-1253514939.cos.ap-shanghai.myqcloud.com/ocweb_attachment/MelbourneRain.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<a id="more"></a>
+
+<h2 id="metingJS支持"><a href="#metingJS支持" class="headerlink" title="metingJS支持"></a>metingJS支持</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;523845661&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FF4081&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+
+    <div id="aplayer-dkVNmWSr" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="523845661" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"
+    ></div>
+
+<h2 id="Dplayer播放器"><a href="#Dplayer播放器" class="headerlink" title="Dplayer播放器"></a>Dplayer播放器</h2><p>配置文件中添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo-tag-dplayer:</span><br><span class="line">  cdn:</span><br><span class="line">    - https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;dplayer&#x2F;dist&#x2F;DPlayer.min.js</span><br><span class="line">    - https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;dplayer&#x2F;dist&#x2F;DPlayer.min.css</span><br><span class="line">  default: </span><br><span class="line">    api: https:&#x2F;&#x2F;api.prprpr.me&#x2F;dplayer&#x2F;</span><br><span class="line">    loop: yes</span><br><span class="line">    screenshot: yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% dplayer &quot;url&#x3D;https:&#x2F;&#x2F;csrc.vcloud.dogecdn.com&#x2F;vcloud&#x2F;17&#x2F;v&#x2F;20190424&#x2F;1556036075_818c4125ec9c8cbc7a7a8a7cc1601512&#x2F;1037&#x2F;7d515b22c4958598c0fbd1e6290a5ca5.mp4?vkey&#x3D;A885F5&amp;tkey&#x3D;15963183258af1c1c1ad&amp;auth_key&#x3D;1596332725-wMv1JovxqelWNSbD-0-f1a3cd5c0c4f631e7cf436ab186352bf&quot;  &quot;pic&#x3D;http:&#x2F;&#x2F;home.ustc.edu.cn&#x2F;~mmmwhy&#x2F;GEM.jpg&quot; &quot;loop&#x3D;yes&quot; &quot;autoplay&#x3D;false&quot; &quot;token&#x3D;tokendemo&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"screenshot":"yes","video":{"url":"https://csrc.vcloud.dogecdn.com/vcloud/17/v/20190424/1556036075_818c4125ec9c8cbc7a7a8a7cc1601512/1037/7d515b22c4958598c0fbd1e6290a5ca5.mp4?vkey=A885F5&tkey=15963183258af1c1c1ad&auth_key=1596332725-wMv1JovxqelWNSbD-0-f1a3cd5c0c4f631e7cf436ab186352bf","pic":"http://home.ustc.edu.cn/~mmmwhy/GEM.jpg"},"danmaku":{"api":"https://api.prprpr.me/dplayer/","token":"tokendemo"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+
+<p><a href="http://www.fontawesome.com.cn/faicons/">http://www.fontawesome.com.cn/faicons/</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hexo写作基础</title>
+    <url>/posts/f693.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="/posts/f693/22.jpg" class="">
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[fa图标大全](http:&#x2F;&#x2F;www.fontawesome.com.cn&#x2F;faicons&#x2F;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="fa图标"><a href="#fa图标" class="headerlink" title="fa图标"></a>fa图标</h1><p><a href="http://www.fontawesome.com.cn/faicons/">fa图标大全</a></p>
+<a id="more"></a>
+
+<h1 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    user_name,</span><br><span class="line">    <span class="keyword">case</span></span><br><span class="line">    <span class="keyword">when</span> height &gt;= <span class="number">180</span> <span class="keyword">and</span> weight &lt;= <span class="number">120</span> <span class="keyword">then</span> <span class="string">&#x27;偏瘦&#x27;</span></span><br><span class="line">    <span class="keyword">when</span> height &lt;= <span class="number">160</span> <span class="keyword">and</span> weight &gt;= <span class="number">140</span> <span class="keyword">then</span> <span class="string">&#x27;偏胖&#x27;</span></span><br><span class="line">    <span class="keyword">else</span> <span class="string">&#x27;正常&#x27;</span></span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">as</span> <span class="string">&quot;体型情况&quot;</span></span><br><span class="line"><span class="keyword">from</span> t_user;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><figcaption><span>测试代码</span><a href="http://www.baidu.com">引用地址</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> nunjucks = <span class="built_in">require</span>(<span class="string">&#x27;nunjucks&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">njkCompile</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> templateDir = path.dirname(data.path);</span><br><span class="line">  <span class="keyword">const</span> env = nunjucks.configure(templateDir, &#123;</span><br><span class="line">    autoescape: <span class="literal">false</span></span><br><span class="line">  &#125;);</span><br><span class="line">  env.addFilter(<span class="string">&#x27;safedump&#x27;</span>, <span class="function"><span class="params">dictionary</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> dictionary !== <span class="string">&#x27;undefined&#x27;</span> &amp;&amp; dictionary !== <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(dictionary);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&quot;&quot;&#x27;</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> nunjucks.compile(data.text, env, data.path);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">njkRenderer</span>(<span class="params">data, locals</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> njkCompile(data).render(locals);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Return a compiled renderer. 查看这里的中文</span></span><br><span class="line">njkRenderer.compile = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> compiledTemplate = njkCompile(data);</span><br><span class="line">  <span class="comment">// Need a closure to keep the compiled template.</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">locals</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> compiledTemplate.render(locals);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Emoji的使用方法"><a href="#Emoji的使用方法" class="headerlink" title="Emoji的使用方法"></a>Emoji的使用方法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">:\sparkles: For example</span><br><span class="line">:\tennis: wangqiu</span><br></pre></td></tr></table></figure>
+
+<p>使用效果<br><span class="github-emoji" alias="sparkles" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8">&#x2728;</span> For example<br><span class="github-emoji" alias="tennis" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3be.png?v8">&#x1f3be;</span> wangqiu</p>
+<h1 id="文章中添加图片"><a href="#文章中添加图片" class="headerlink" title="文章中添加图片"></a>文章中添加图片</h1><p>标签代码格式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_path 图片名 %&#125;</span><br><span class="line">&#123;% asset_img 图片名 [title] %&#125;</span><br><span class="line">&#123;% asset_link 图片名 [title] %&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="播放音乐"><a href="#播放音乐" class="headerlink" title="播放音乐"></a>播放音乐</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer &quot;Melbourne rain&quot; &quot;Steve Wallis&quot; &quot;https:&#x2F;&#x2F;ocsys-1253514939.cos.ap-shanghai.myqcloud.com&#x2F;ocweb_attachment&#x2F;Melbourne%20rain.mp3&quot; &quot;https:&#x2F;&#x2F;ocsys-1253514939.cos.ap-shanghai.myqcloud.com&#x2F;ocweb_attachment&#x2F;MelbourneRain.jpg&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+        <div id="aplayer-ovdfIvCy" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-ovdfIvCy"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "Melbourne rain",
+              author: "Steve Wallis",
+              url: "https://ocsys-1253514939.cos.ap-shanghai.myqcloud.com/ocweb_attachment/Melbourne%20rain.mp3",
+              pic: "https://ocsys-1253514939.cos.ap-shanghai.myqcloud.com/ocweb_attachment/MelbourneRain.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<h2 id="metingJS支持"><a href="#metingJS支持" class="headerlink" title="metingJS支持"></a>metingJS支持</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;523845661&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FF4081&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+
+    <div id="aplayer-cderOIMb" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="523845661" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"
+    ></div>
+
+<h1 id="播放视频"><a href="#播放视频" class="headerlink" title="播放视频"></a>播放视频</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% dplayer &quot;url&#x3D;https:&#x2F;&#x2F;csrc.vcloud.dogecdn.com&#x2F;vcloud&#x2F;17&#x2F;v&#x2F;20190424&#x2F;1556036075_818c4125ec9c8cbc7a7a8a7cc1601512&#x2F;1037&#x2F;7d515b22c4958598c0fbd1e6290a5ca5.mp4?vkey&#x3D;A885F5&amp;tkey&#x3D;15963183258af1c1c1ad&amp;auth_key&#x3D;1596332725-wMv1JovxqelWNSbD-0-f1a3cd5c0c4f631e7cf436ab186352bf&quot;  &quot;pic&#x3D;http:&#x2F;&#x2F;home.ustc.edu.cn&#x2F;~mmmwhy&#x2F;GEM.jpg&quot; &quot;loop&#x3D;yes&quot; &quot;autoplay&#x3D;false&quot; &quot;token&#x3D;tokendemo&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"theme":"#FADFA3","loop":true,"screenshot":"yes","video":{"url":"https://csrc.vcloud.dogecdn.com/vcloud/17/v/20190424/1556036075_818c4125ec9c8cbc7a7a8a7cc1601512/1037/7d515b22c4958598c0fbd1e6290a5ca5.mp4?vkey=A885F5&tkey=15963183258af1c1c1ad&auth_key=1596332725-wMv1JovxqelWNSbD-0-f1a3cd5c0c4f631e7cf436ab186352bf","pic":"http://home.ustc.edu.cn/~mmmwhy/GEM.jpg"},"danmaku":{"api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+]]></content>
+  </entry>
+</search>
